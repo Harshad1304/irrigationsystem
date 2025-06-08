@@ -55,31 +55,41 @@ const {convertedTime} = useMilitaryTimeConverter()
                             </tr>
                         </thead>
                         <tbody className="bg-white divide-y divide-gray-200">
-                            {data?.map((item, index) => (
-                                <tr 
-                                    key={item.index || index}
-                                    className="hover:bg-gray-50 transition-colors duration-150"
-                                >
-                                    
-                                    <td className="px-6 py-4 text-sm font-medium">
-                                        {item.plot}
-                                    </td>
-                                    <td className="px-6 py-4 text-sm">
-                                        {convertedTime(item.startTime)}
-                                    </td>
-                                    <td className="px-6 py-4 text-sm">
-                                        {convertedTime(item.endTime)}
-                                    </td>
-                                    <td className="px-6 py-4 text-sm">
-                                        {item.RunBy}
-                                    </td>
-                                    <td className="px-6 py-4">
-                                        <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(getPlotStatus(item))}`}>
-                                            {getPlotStatus(item)}
-                                        </span>
-                                    </td>
-                                </tr>
-                            ))}
+                          {
+                            data.length > 0 ? (
+                                data?.map((item, index) => (
+                                    <tr 
+                                        key={item.index || index}
+                                        className="hover:bg-gray-50 transition-colors duration-150"
+                                    >
+                                        
+                                        <td className="px-6 py-4 text-sm font-medium">
+                                            {item.plot}
+                                        </td>
+                                        <td className="px-6 py-4 text-sm">
+                                            {convertedTime(item.startTime)}
+                                        </td>
+                                        <td className="px-6 py-4 text-sm">
+                                            {convertedTime(item.endTime)}
+                                        </td>
+                                        <td className="px-6 py-4 text-sm">
+                                            {item.RunBy}
+                                        </td>
+                                        <td className="px-6 py-4">
+                                            <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(getPlotStatus(item))}`}>
+                                                {getPlotStatus(item)}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                ))
+                            ) : (
+                              <tr>
+                                <td colSpan={5} className="h-[calc(100vh-26rem)] text-center">
+                                  No data available
+                                </td>
+                              </tr>
+                            )
+                          }
                         </tbody>
                     </table>
                 </div>

@@ -25,123 +25,8 @@ function getPlotStatus(plot) {
   }
 }
 
-const scheduleData = [
-  {
-    index: 8,
-    plot: "D1",
-    startTime: "183000",
-    endTime: "184500",
-    RunBy: "M1",
-  },
-  {
-    index: 9,
-    plot: 'D2',
-    startTime: '080000',
-    endTime: '080459',
-    RunBy: 'M2'
-  },
-  {
-    index: 10,
-    plot: 'D3',
-    startTime: '080500',
-    endTime: '080959',
-    RunBy: 'M1'
-  },
-  {
-    index: 11,
-    plot: 'D4',
-    startTime: '080500',
-    endTime: '080959',
-    RunBy: 'M2'
-  },
-  {
-    index: 12,
-    plot: 'D1',
-    startTime: '083000',
-    endTime: '083459',
-    RunBy: 'M1'
-  },
-  {
-    index: 13,
-    plot: 'D2',
-    startTime: '083000',
-    endTime: '083459',
-    RunBy: 'M2'
-  },
-  {
-    index: 14,
-    plot: 'D3',
-    startTime: '083500',
-    endTime: '083959',
-    RunBy: 'M1'
-  },
-  {
-    index: 15,
-    plot: 'D4',
-    startTime: '083500',
-    endTime: '083959',
-    RunBy: 'M2'
-  },
-  {
-    index: 16,
-    plot: 'D1',
-    startTime: '090000',
-    endTime: '090459',
-    RunBy: 'M1'
-  },
-  {
-    index: 17,
-    plot: 'D2',
-    startTime: '090000',
-    endTime: '090459',
-    RunBy: 'M2'
-  },
-  {
-    index: 18,
-    plot: 'D3',
-    startTime: '090500',
-    endTime: '090959',
-    RunBy: 'M1'
-  },
-  {
-    index: 19,
-    plot: 'D4',
-    startTime: '090500',
-    endTime: '090959',
-    RunBy: 'M2'
-  },
-  {
-    index: 20,
-    plot: 'D1',
-    startTime: '093000',
-    endTime: '093459',
-    RunBy: 'M1'
-  },
-  {
-    index: 21,
-    plot: 'D2',
-    startTime: '093000',
-    endTime: '093459',
-    RunBy: 'M2'
-  },
-  {
-    index: 22,
-    plot: 'D3',
-    startTime: '093500',
-    endTime: '093959',
-    RunBy: 'M1'
-  },
-  {
-    index: 23,
-    plot: 'D4',
-    startTime: '093500',
-    endTime: '093959',
-    RunBy: 'M2'
-  }
-]
-
 function Schedule() {
-  const [scheduleDataState, setScheduleData] = useState(scheduleData);
+  const [scheduleDataState, setScheduleData] = useState([]);
   const [filters, setFilters] = useState({});
 
   // Get unique plots
@@ -149,7 +34,6 @@ function Schedule() {
 
   // Status filter options
   const statusOptions = [
-    { label: 'All Status', value: '' },
     { label: 'Pending', value: 'pending' },
     { label: 'In Progress', value: 'in_progress' },
     { label: 'Completed', value: 'completed' }
