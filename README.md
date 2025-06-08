@@ -75,8 +75,3 @@ src/
 🧾 License
 
 This project is for evaluation purposes only. Not intended for production or commercial use.
-
-🙌 Acknowledgements
-
-- Icons from flaticon.com
-- UI Inspiration from Behance Design
