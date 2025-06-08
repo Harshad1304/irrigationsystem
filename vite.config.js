@@ -1,4 +1,4 @@
-import { defineConfig, resolve } from 'vite'
+import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [ tailwindcss(), react()],
   resolve: {
     alias: {
-      'react-icons': resolve(__dirname, 'node_modules/react-icons')
+      'react-icons': '/node_modules/react-icons'
     }
   }
 })
