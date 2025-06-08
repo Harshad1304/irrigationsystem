@@ -1,12 +1,82 @@
-# React + Vite
+# React# 🌿 Irrigation System IoT Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and interactive web application built with **React.js**, **Vite**, and **Tailwind CSS** to automate irrigation cycles for IoT-based farming systems. This project was developed as an interview assignment to demonstrate problem-solving, UI design, and real-time scheduling logic.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+- 🔗 [Netlify Deployment](https://irrigationsys.netlify.app/)
+- 🔗 [Vercel Deployment](https://irrigationsystem-gamma.vercel.app/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧠 Features
+
+- Configure:
+  - Number of plots (e.g., D1, D2, ...)
+  - Number of motors (e.g., M1, M2, ...)
+  - Irrigation start and end time (military format)
+  - Motor runtime duration
+  - Cycle interval between irrigation batches
+- Auto-generate optimized irrigation cycles
+- Real-time status tracking:
+  - ✅ Done
+  - 🔄 In Progress
+  - ⏳ Pending
+- Time format conversion:
+  - Converts military time (e.g., `070000`) to human-readable AM/PM format
+- Table view with filters:
+  - Filter by plot
+  - Filter by status
+- Clean, responsive UI inspired by modern dashboard designs
+- Deployed on both **Vercel** and **Netlify** for high availability
+
+---
+
+## 🛠️ Tech Stack
+
+- **React.js** (Frontend Framework)
+- **Vite** (Build Tool)
+- **Tailwind CSS** (Styling)
+- **Netlify / Vercel** (Deployment)
+
+---
+
+## 📸 Screenshots
+
+![Homepage](./public/screenshots/homepage.png)
+![Schedule](./public/screenshots/schedulepage.png)
+![ScheduleWithInfo](./public/screenshots/schedulepage2.png)
+---
+
+## 📦 Getting Started
+
+To run the project locally:
+
+```bash
+git clone https://github.com/Harshad1304/irrigationsystem.git
+cd irrigationsystem
+npm install
+npm run dev
+```
+
+📁 Project Structure
+
+```
+src/
+├── components/        # Reusable UI components
+├── utils/             # Helper functions (e.g., time conversion)
+├── data/              # Sample mock data
+├── pages/             # Main page views
+└── App.jsx            # Main application entry point
+```
+
+🧾 License
+
+This project is for evaluation purposes only. Not intended for production or commercial use.
+
+🙌 Acknowledgements
+
+- Icons from flaticon.com
+- UI Inspiration from Behance Design
