@@ -83,9 +83,6 @@ function Schedule() {
           <h2 className="text-2xl  font-semibold text-white flex items-center gap-3">
             Irrigation Schedule Table
           </h2>
-                       <h2 className="text-2xl  font-semibold text-white flex items-center gap-3">
-                         Irrigation Schedule Table
-                       </h2>
                      </div>
             <FilterComponent  filtersConfig={filtersConfig} onApplyFilters={handleApplyFilters}/>
             <div className="overflow-y-auto">
